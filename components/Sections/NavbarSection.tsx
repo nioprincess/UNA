@@ -35,7 +35,10 @@ const Navbar = () => {
 
   return (
     <>
-      {isActive('/admin') || isActive('/admin/team') || isActive('/admin/blog') ? (
+      {isActive('/signin') ||
+      isActive('/admin') ||
+      isActive('/admin/team') ||
+      isActive('/admin/blog') ? (
         ''
       ) : (
         <nav

@@ -8,7 +8,8 @@ const Footer = () => {
   }
   return (
     <>
-      {isActive('/admin') ||
+      {isActive('/signin') ||
+      isActive('/admin') ||
       isActive('/admin/team') ||
       isActive('/admin/blog') ? (
         ''

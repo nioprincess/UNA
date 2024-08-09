@@ -20,7 +20,8 @@ const ContactUsSection = () => {
 
   return (
     <>
-      {isActive('/admin') ||
+      {isActive('/signin') ||
+      isActive('/admin') ||
       isActive('/admin/team') ||
       isActive('/admin/blog') ? (
         ''
@@ -119,11 +120,14 @@ const ContactUsSection = () => {
                       Donate
                     </a>
                   </li>
-                  {/* <li>
-                <a href="/" className="text-gray-600 hover:text-gray-800">
-                  FAQ
-                </a>
-              </li> */}
+                  <li>
+                    <a
+                      href="/signin"
+                      className="text-gray-600 hover:text-gray-800"
+                    >
+                      Smart Admin
+                    </a>
+                  </li>
                 </ul>
               </div>
               <div className="w-full md:w-1/4 px-4 mb-8">
