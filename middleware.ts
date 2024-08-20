@@ -5,8 +5,17 @@ export async function middleware(req: NextRequest) {
   const token = req.cookies.get('token')?.value
   const url = req.nextUrl.clone()
 
+  if (!token && url.pathname === '/signin') {
+    return NextResponse.next()
+  }
+
   if (!token) {
     url.pathname = '/signin'
+    return NextResponse.redirect(url)
+  }
+
+  if (token && url.pathname === '/signin') {
+    url.pathname = '/admin'
     return NextResponse.redirect(url)
   }
 
@@ -22,12 +31,12 @@ export async function middleware(req: NextRequest) {
       url.pathname = '/signin'
       return NextResponse.redirect(url)
     }
-  } catch (error:any) {    
+  } catch (error: any) {
     url.pathname = '/signin'
     return NextResponse.redirect(url)
   }
 }
 
 export const config = {
-  matcher: ['/admin/:path*'],
+  matcher: ['/admin/:path*', '/signin'],
 }

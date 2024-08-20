@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { HomeIcon, UserIcon } from '@heroicons/react/16/solid'
 import { FaNewspaper } from 'react-icons/fa'
-import { MdDashboard } from 'react-icons/md'
+import { MdContactPage, MdDashboard } from 'react-icons/md'
 import { FiLogOut } from 'react-icons/fi'
 import { useRouter } from 'next/navigation'
 import axios from 'axios'
@@ -63,6 +63,15 @@ export default function AdminLayout({
               >
                 <UserIcon className="h-5 w-5" />
                 <span className="">Team</span>
+              </Link>
+            </li>
+            <li className="flex-1 ">
+              <Link
+                href="/admin/contact"
+                className="flex gap-3 py-2 px-4 rounded hover:bg-gray-700 text-center md:text-left"
+              >
+                <MdContactPage className="h-5 w-5" />
+                <span className="">Contact</span>
               </Link>
             </li>
             <li className="flex-1 ">

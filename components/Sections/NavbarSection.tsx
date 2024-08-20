@@ -38,6 +38,7 @@ const Navbar = () => {
       {isActive('/signin') ||
       isActive('/admin') ||
       isActive('/admin/team') ||
+      isActive('/admin/contact') ||
       isActive('/admin/blog') ? (
         ''
       ) : (
