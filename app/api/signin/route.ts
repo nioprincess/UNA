@@ -32,6 +32,10 @@ export async function POST(req: Request) {
         maxAge: 3600,
         path: '/',
       })
+      
+      console.log('====================================');
+      console.log(response);
+      console.log('====================================');
 
       return response
     }

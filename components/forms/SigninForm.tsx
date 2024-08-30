@@ -17,6 +17,9 @@ const SigninForm: React.FC = () => {
       const data = await response?.data
 
       if (response.status === 200) {
+        console.log('====================================');
+        console.log(response);
+        console.log('====================================');
         toast.success('Sign-in successful!')
         route.push('/admin')
       } else {
