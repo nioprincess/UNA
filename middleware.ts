@@ -20,8 +20,13 @@ export async function middleware(req: NextRequest) {
   }
 
   try {
+    const baseURL =
+      process.env.NODE_ENV === 'production'
+        ? process.env.NEXT_PUBLIC_API_BASE_URL
+        : 'http://localhost:3000'
+    
     const response = await axios.post(
-      'http://localhost:3000/api/verify-token',
+      `${baseURL}/api/verify-token`,
       JSON.stringify({ token })
     )
 
