@@ -1,3 +1,4 @@
+import { m } from "framer-motion";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -11,6 +12,7 @@ const config: Config = {
       xs: { max: '425px' },
       sm: { min: '426px' },
       md: { min: '769px' },
+      m: { min: '1000px' },
       lg: { min: '1440px' },
       xl: { min: '2560px' },
     },

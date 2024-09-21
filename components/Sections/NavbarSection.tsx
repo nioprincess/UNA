@@ -6,6 +6,10 @@ import logo from '../../public/unarwanda16X16.png'
 import unLogo from '../../public/un-logo.png'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/16/solid'
 import { usePathname } from 'next/navigation'
+import { DownOutlined } from '@ant-design/icons'
+import type { MenuProps } from 'antd'
+import { Dropdown, Space } from 'antd'
+
 
 
 const Navbar = () => {
@@ -15,7 +19,48 @@ const Navbar = () => {
   const isActive = (href: string) => {
     return pathname === href
   }
-
+  
+  const items: MenuProps['items'] = [
+    {
+      key: '1',
+      label: (
+        <a
+          href="/get-involved"
+          className={`block px-4 py-2 hover:text-[#4894DF] font-semibold ${
+            isActive('/get-involved') ? 'text-[#4894DF]' : ''
+          }`}
+        >
+          Get Involved
+        </a>
+      ),
+    },
+    {
+      key: '2',
+      label: (
+        <a
+          href="/contact-us"
+          className={`block px-4 py-2 hover:text-[#4894DF] font-semibold ${
+            isActive('/contact-us') ? 'text-[#4894DF]' : ''
+          }`}
+        >
+          Contact Us
+        </a>
+      ),
+    },
+    {
+      key: '3',
+      label: (
+        <a
+          href="/donate"
+          className={`block px-4 py-2 hover:text-[#4894DF] font-semibold ${
+            isActive('/donate') ? 'text-[#4894DF]' : ''
+          }`}
+        >
+          Donate
+        </a>
+      ),
+    },
+  ]
     const toggleMenu = () => {      
     setIsOpen(!isOpen)
   }
@@ -61,7 +106,7 @@ const Navbar = () => {
                 />
               </Link>
             </div>
-            <div className="hidden lg:flex space-x-8 flex-grow justify-center items-center ">
+            <div className="hidden md:flex flex-grow justify-around items-center ">
               <a
                 href="/"
                 className={`hover:text-[#4894DF] px-2 font-semibold ${
@@ -104,15 +149,23 @@ const Navbar = () => {
               </a>
               <a
                 href="get-involved"
-                className={`hover:text-[#4894DF] px-2 font-semibold ${
+                className={`hover:text-[#4894DF] px-2 font-semibold md:hidden m:block ${
                   isActive('/get-involved') ? 'text-[#4894DF]' : ''
                 }`}
               >
                 Get Involved
               </a>
+              <Dropdown menu={{ items }} className="hidden md:flex m:hidden">
+                <a onClick={(e) => e.preventDefault()}>
+                  <Space>
+                    <DownOutlined />
+                  </Space>
+                </a>
+              </Dropdown>
+
               <a
                 href="/contact-us"
-                className={`hover:text-[#4894DF] px-2 font-semibold ${
+                className={`hover:text-[#4894DF] px-2 font-semibold md:hidden m:block ${
                   isActive('/contact-us') ? 'text-[#4894DF]' : ''
                 }`}
               >
@@ -120,14 +173,14 @@ const Navbar = () => {
               </a>
               <a
                 href="/donate"
-                className={`hover:text-[#4894DF] px-2 font-semibold ${
+                className={`hover:text-[#4894DF] px-2 font-semibold md:hidden m:block ${
                   isActive('') ? 'text-[#4894DF]' : ''
                 }`}
               >
                 Donate
               </a>
             </div>
-            <div className="lg:hidden flex items-center z-20">
+            <div className="md:hidden flex items-center z-20">
               <button onClick={toggleMenu}>
                 {isOpen ? (
                   <XMarkIcon
@@ -144,7 +197,7 @@ const Navbar = () => {
                 )}
               </button>
             </div>
-            <div className="hidden lg:flex items-center">
+            <div className="hidden md:flex items-center">
               <Link className="flex-shrink-0" href="/">
                 <Image
                   width={130}
