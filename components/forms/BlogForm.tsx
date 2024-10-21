@@ -15,7 +15,7 @@ interface BlogFormProps {
     description: string
     location: string
     date: string
-    id?: string
+    _id?: string
   }
   onSubmit: () => void
 }
@@ -61,8 +61,17 @@ const BlogForm: React.FC<BlogFormProps> = ({ initialData, onSubmit }) => {
     formData.append('picture', uploadedImage)
 
     try {
-      if (initialData?.id) {
-        await axios.put('/api/news', formData)
+      if (initialData?._id) {
+        const updatedData = new FormData()
+        updatedData.append('id', initialData._id)
+        updatedData.append('title', title)
+        updatedData.append('description', description)
+        updatedData.append('location', location)
+        updatedData.append('date', date)
+        updatedData.append('picture', uploadedImage)
+        console.log(updatedData.get('id'));	
+        
+        await axios.put(`/api/news`, updatedData)
       } else {
         await axios.post('/api/news', formData)
       }
@@ -132,7 +141,7 @@ const BlogForm: React.FC<BlogFormProps> = ({ initialData, onSubmit }) => {
         htmlType="submit"
         loading={loading}
       >
-        {initialData?.id ? 'Update Post' : 'Add Post'}
+        {initialData?._id ? 'Update Post' : 'Add Post'}
       </Button>
     </form>
   )

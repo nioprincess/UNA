@@ -55,7 +55,7 @@ const ContactUsSection = () => {
                 </p>
                 <div className="flex space-x-4">
                   <a
-                      href={contact?.facebook}
+                    href={contact?.facebook}
                     target="_blank"
                     className="text-gray-500 hover:text-gray-700"
                   >
@@ -68,12 +68,20 @@ const ContactUsSection = () => {
                   >
                     <FaTwitter className="h-6 w-6" />
                   </a>
-                  <a href={contact?.linkedin} className="text-gray-500 hover:text-gray-700">
-                <FaLinkedinIn className="h-6 w-6" />
-              </a>
-                  <a href={contact?.instagram} className="text-gray-500 hover:text-gray-700">
-                <FaInstagram className="h-6 w-6" />
-              </a>
+                  <a
+                    href={contact?.linkedin}
+                    target="_blank"
+                    className="text-gray-500 hover:text-gray-700"
+                  >
+                    <FaLinkedinIn className="h-6 w-6" />
+                  </a>
+                  <a
+                    href={contact?.instagram}
+                    target="_blank"
+                    className="text-gray-500 hover:text-gray-700"
+                  >
+                    <FaInstagram className="h-6 w-6" />
+                  </a>
                 </div>
               </div>
               <div className="w-full md:w-1/4 px-4 mb-8">
@@ -149,10 +157,12 @@ const ContactUsSection = () => {
                 </h3>
                 <ul className="space-y-2">
                   <li className="flex items-center text-gray-600">
-                    <HiLocationMarker size={20} className="h-5 w-5 mr-2" /> {contact?.location}
+                    <HiLocationMarker size={20} className="h-5 w-5 mr-2" />{' '}
+                    {contact?.location}
                   </li>
                   <li className="flex items-center text-gray-600">
-                    <PhoneIcon className="h-5 w-5 mr-2" /> {contact?.phoneNumber}
+                    <PhoneIcon className="h-5 w-5 mr-2" />{' '}
+                    {contact?.phoneNumber}
                   </li>
                   <li className="flex items-center text-gray-600">
                     <FiMail className="h-5 w-5 mr-2" /> {contact?.email}

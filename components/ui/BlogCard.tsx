@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { truncateText } from '@/lib/utils/truncateText';
 
 interface BlogCardProps {
@@ -15,8 +16,9 @@ interface BlogCardProps {
 }
 
 const BlogCard: React.FC<BlogCardProps> = ({ blog, onEdit, onDelete }) => (
-  <div key={blog._id} className="border rounded-lg overflow-hidden shadow-lg p-4">
-    <img src={blog.picture} alt={blog.title} className="w-full h-64 object-cover" />
+  <div>
+    <Image src={blog.picture} alt={blog.title} width={500} height={256} className="w-full h-64 object-cover" />
+    {/* <img src={blog.picture} alt={blog.title} className="w-full h-64 object-cover" /> */}
     <div>
       <p className="text-gray-600 text-sm">{new Date(blog.date).toLocaleDateString()}</p>
       <p className="text-gray-600 text-sm">{blog.location}</p>
