@@ -24,6 +24,19 @@ const Navbar = () => {
     {
       key: '1',
       label: (
+          <a
+            href="/media"
+            className={`block px-4 py-2 hover:text-[#4894DF] font-semibold ${
+              isActive('/media') ? 'text-[#4894DF]' : ''
+            }`}
+          >
+            Media
+          </a>
+      ),
+    },
+    {
+      key: '2',
+      label: (
         <a
           href="/get-involved"
           className={`block px-4 py-2 hover:text-[#4894DF] font-semibold ${
@@ -35,7 +48,7 @@ const Navbar = () => {
       ),
     },
     {
-      key: '2',
+      key: '3',
       label: (
         <a
           href="/contact-us"
@@ -48,7 +61,7 @@ const Navbar = () => {
       ),
     },
     {
-      key: '3',
+      key: '4',
       label: (
         <a
           href="/donate"
@@ -140,8 +153,16 @@ const Navbar = () => {
                 Our Team
               </a>
               <a
-                href="/media"
+                href="/news"
                 className={`hover:text-[#4894DF] px-2 font-semibold ${
+                  isActive('/news') ? 'text-[#4894DF]' : ''
+                }`}
+              >
+                News & Events
+              </a>
+              <a
+                href="/media"
+                className={`hover:text-[#4894DF] px-2 font-semibold md:hidden m:block ${
                   isActive('/media') ? 'text-[#4894DF]' : ''
                 }`}
               >
@@ -242,6 +263,14 @@ const Navbar = () => {
                 }`}
               >
                 Our Team
+              </a>
+              <a
+                href="/news"
+                className={`block px-4 py-2 hover:text-[#4894DF] font-semibold ${
+                  isActive('/news') ? 'text-[#4894DF]' : ''
+                }`}
+              >
+                News & Events
               </a>
               <a
                 href="/media"

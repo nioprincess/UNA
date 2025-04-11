@@ -15,7 +15,7 @@ const Footer = () => {
       isActive('/admin/blog') ? (
         ''
       ) : (
-        <footer className="bg-[#111] py-6">
+        <footer className="bg-[#111] py-6 cursor-default">
           <div className="w-full">
             <hr className="text-gray-500 text-center w-[80%] mx-auto py-2 px-2" />
             <div className="text-center text-gray-500">

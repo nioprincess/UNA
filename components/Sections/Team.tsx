@@ -74,7 +74,7 @@ const Team: React.FC = () => {
         )
       ) : (
         <h4
-          className="text-[#4894DF] underline"
+          className="text-[#4894DF] underline cursor-pointer"
           onClick={() => setShowBoardMembers(!showBoardMembers)}
         >
           Click to see Board Members

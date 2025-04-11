@@ -39,7 +39,7 @@ const ContactUsSection = () => {
       isActive('/admin/blog') ? (
         ''
       ) : (
-        <footer className="bg-[#111] py-12">
+        <footer className="bg-[#111] py-12 cursor-default">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-wrap -mx-4 justify-between">
               <div className="w-full md:w-1/4 px-4 mb-8">
