@@ -100,10 +100,10 @@ const GetInTouch = () => {
                 +250 788 832 640
               </a>
               <a
-                href="tel:+250 788 832 640"
+                href="tel:+250 788 614 667"
                 className="text-gray-500 hover:text-[#4894DF]"
               >
-                +250 788 832 640
+                +250 788 614 667
               </a>
             </div>
           </div>

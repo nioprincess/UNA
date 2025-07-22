@@ -1,5 +1,6 @@
 'use client'
 import { truncateText } from '@/lib/utils/truncateText'
+import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import Slider from 'react-slick'
 interface Blog {
@@ -115,35 +116,42 @@ const NewsEvents = () => {
         </div>
 
         <Slider {...settings}>
-          {newsEvents.map((event) => (
-            <div key={event._id} className="p-4">
-              <div className="bg-white border rounded-lg shadow-md overflow-hidden">
-                <img
-                  src={event.picture}
-                  alt={event.title}
-                  className="w-full h-48 object-cover hover:scale-105 transition duration-300 ease-in-out"
-                />
-                <div className="p-4">
-                  <div className="flex items-center text-gray-500 text-sm">
-                    <span className="mr-2">{event.location}</span>
-                    <span className="mr-2">•</span>
-                    <span>{new Date(event.date).toLocaleDateString()}</span>
+          {newsEvents
+            ?.sort(
+              (a: any, b: any) =>
+                new Date(b.date).getTime() - new Date(a.date).getTime()
+            )
+            .map((event) => (
+              <div key={event._id} className="p-4">
+                <div className="bg-white border rounded-lg shadow-md overflow-hidden">
+                  <Image
+                    src={event.picture}
+                    alt={event.title}
+                    width={500}
+                    height={200}
+                    className="w-full h-48 object-cover hover:scale-105 transition duration-300 ease-in-out"
+                  />
+                  <div className="p-4">
+                    <div className="flex items-center text-gray-500 text-sm">
+                      <span className="mr-2">{event.location}</span>
+                      <span className="mr-2">•</span>
+                      <span>{new Date(event.date).toLocaleDateString()}</span>
+                    </div>
+                    <h3 className="mt-2 text-lg font-bold">{event.title}</h3>
+                    <p className="mt-2 text-gray-600">
+                      {truncateText(event.description, 150)}
+                    </p>
+                    <a
+                      href={`/news/${event._id}`}
+                      // href={`#`}
+                      className="mt-4 inline-block text-orange-600 font-semibold"
+                    >
+                      READ MORE &gt;&gt;
+                    </a>
                   </div>
-                  <h3 className="mt-2 text-lg font-bold">{event.title}</h3>
-                  <p className="mt-2 text-gray-600">
-                    {truncateText(event.description, 150)}
-                  </p>
-                  <a
-                    href={`/news/${event._id}`}
-                    // href={`#`}
-                    className="mt-4 inline-block text-orange-600 font-semibold"
-                  >
-                    READ MORE &gt;&gt;
-                  </a>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
         </Slider>
       </div>
     </div>

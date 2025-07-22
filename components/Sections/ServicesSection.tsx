@@ -68,10 +68,6 @@ export const ServicesSection = () => {
             <h2 className="font-bold tracking-wide mb-4  text-3xl ">
               Our Programs
             </h2>
-            {/* <p className="my-0 text-[15px] text-[#646464] leading-7 mx-auto  max-w-[650px]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p> */}
           </div>
 
           <div className="mt-10">

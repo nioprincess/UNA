@@ -50,14 +50,19 @@ const BlogDashboard = () => {
       <div className="mt-8">
         <h2 className="text-2xl font-bold">Existing News & Events Posts</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
-          {blogs?.map((blog:any) => (
-            <BlogCard
-              key={blog._id}
-              blog={blog}
-              onEdit={handleEdit}
-              onDelete={handleDelete}
-            />
-          ))}
+          {blogs
+            ?.sort(
+              (a: any, b: any) =>
+                new Date(b.date).getTime() - new Date(a.date).getTime()
+            ) // Sort blogs by date (most recent first)
+            .map((blog: any) => (
+              <BlogCard
+                key={blog._id}
+                blog={blog}
+                onEdit={handleEdit}
+                onDelete={handleDelete}
+              />
+            ))}
         </div>
       </div>
     </div>
@@ -65,4 +70,3 @@ const BlogDashboard = () => {
 }
 
 export default BlogDashboard
-

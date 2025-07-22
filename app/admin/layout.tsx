@@ -1,14 +1,29 @@
+'use client'
 import Link from 'next/link'
 import Image from 'next/image'
 import { HomeIcon, UserIcon } from '@heroicons/react/16/solid'
 import { FaNewspaper } from 'react-icons/fa'
-import { MdDashboard } from 'react-icons/md'
+import { MdContactPage, MdDashboard } from 'react-icons/md'
+import { FiLogOut } from 'react-icons/fi'
+import { useRouter } from 'next/navigation'
+import axios from 'axios'
+import { toast } from 'react-toastify'
 
 export default function AdminLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const router = useRouter()
+  const handleSignOut = async () => {
+    try {
+      await axios.post('/api/signout')
+      router.push('/')
+    } catch (error:any) {
+      console.error('Sign-out error:', error)
+      toast.error(error.message)
+    }
+  }
   return (
     <div className="flex flex-col min-h-screen w-full md:flex-row">
       <aside className="md:w-[20%] bg-gray-800 text-white p-4 md:h-screen md:relative md:flex md:flex-col hidden">
@@ -50,6 +65,24 @@ export default function AdminLayout({
                 <span className="">Team</span>
               </Link>
             </li>
+            <li className="flex-1 ">
+              <Link
+                href="/admin/contact"
+                className="flex gap-3 py-2 px-4 rounded hover:bg-gray-700 text-center md:text-left"
+              >
+                <MdContactPage className="h-5 w-5" />
+                <span className="">Contact</span>
+              </Link>
+            </li>
+            <li className="flex-1 ">
+              <div
+                onClick={handleSignOut}
+                className="flex gap-3 py-2 px-4 rounded hover:bg-gray-700 text-center md:text-left"
+              >
+                <FiLogOut className="h-5 w-5" />
+                <span className="">Logout</span>
+              </div>
+            </li>
           </ul>
         </nav>
       </aside>
@@ -87,6 +120,14 @@ export default function AdminLayout({
               >
                 <HomeIcon className="h-5 w-5" />
               </Link>
+            </li>
+            <li>
+              <div
+                onClick={handleSignOut}
+                className="flex gap-3 py-2 px-4 rounded hover:bg-gray-400 text-center md:text-left"
+              >
+                <FiLogOut className="h-5 w-5" />
+              </div>
             </li>
           </ul>
         </nav>

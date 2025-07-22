@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import profile from '../../public/profile.png'
 
-
 type ProfileProps = {
   name: string
   role: string
@@ -72,24 +71,40 @@ const Profile: React.FC<ProfileProps> = ({
           </p>
         )}
 
-        <p className="mt-2 text-gray-600">
-          If you would like to contact {name.split(' ')[0]} directly, email{' '}
-          <a
-            href={`mailto:${email}`}
-            className="font-bold text-gray-500 underline"
-          >
-            {email}
-          </a>{' '}
-          or connect on{' '}
-          <a
-            href={linkedin}
-            target="_blank"
-            className="font-bold text-gray-500"
-          >
-            LinkedIn
-          </a>
-          .
-        </p>
+        {(email || linkedin) && (
+          <p className="mt-2 text-gray-600">
+            If you would like to contact {name.split(' ')[0]} directly,
+            {email && (
+              <>
+                {' '}
+                email{' '}
+                <a
+                  href={`mailto:${email}`}
+                  className="font-bold text-gray-500 underline"
+                >
+                  {email}
+                </a>
+              </>
+            )}
+            {email && linkedin && ' or '}
+            {linkedin && (
+              <>
+                {' '}
+                connect on{' '}
+                <a
+                  href={linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bold text-gray-500"
+                >
+                  LinkedIn
+                </a>
+              </>
+            )}
+            .
+          </p>
+        )}
+
         {shouldShowMoreButton && (
           <button
             onClick={() => setShowMore(!showMore)}
