@@ -168,7 +168,7 @@ const Navbar = () => {
               >
                 Media
               </a>
-              {/*
+              
               <a
                 href="get-involved"
                 className={`hover:text-[#4894DF] px-2 font-semibold md:hidden m:block ${
@@ -177,7 +177,7 @@ const Navbar = () => {
               >
                 Get Involved
               </a>
-            */}
+                
               <Dropdown menu={{ items }} className="hidden md:flex m:hidden">
                 <a onClick={(e) => e.preventDefault()}>
                   <Space>
