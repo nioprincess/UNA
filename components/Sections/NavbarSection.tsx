@@ -105,13 +105,13 @@ const Navbar = () => {
               : "bg-transparent text-white"
           }`}
         >
-          <div className=" mx-auto md:py-2 py-6 px-8 md:px-24 flex items-center justify-between">
+          <div className=" mx-auto md:py-2 py-6 px-8 flex items-center justify-between">
             <div className="flex items-center">
               <Link className="flex-shrink-0" href="/">
                 <Image
-                  width={130}
+                  width={80}
                   height={50}
-                  className={`md:w-[160px] w-[80px]`}
+                  className={`md:w-[120px] w-[80px]`}
                   src={logo}
                   alt="UNA Rwanda"
                 />
@@ -223,9 +223,9 @@ const Navbar = () => {
             <div className="hidden md:flex items-center">
               <Link className="flex-shrink-0" href="/">
                 <Image
-                  width={130}
+                  width={80}
                   height={50}
-                  className={`md:w-[160px] w-[80px] p-3`}
+                  className={`md:w-[120px] w-[80px] p-3`}
                   src={unLogo}
                   alt="UNA Rwanda"
                 />
