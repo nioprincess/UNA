@@ -61,7 +61,7 @@ During the 23rd session of Rwanda’s Parliament, 180 women leaders, including U
         key: "UNARW/ngoma/ngoma_1",
         title: "International Day of the African Child",
         description:
-          "In February, UNA Rwanda visited the Ngoma Women's Correctional Facility to engage with women and their children. Discussions focused on empowerment, health, and future opportunities, including practical advice on dental care and maintaining oral hygiene. The visit aimed to equip the women with knowledge and tools for personal growth and well-being. UNA Rwanda remains committed to supporting the rights and well-being of women and their children, working towards positive reintegration into society.",
+          "UNA Rwanda celebrated the International Day of the African Child at Ngoma Women’s Correctional Facility, focusing on children’s rights, education, and empowerment. With an emphasis on Early Childhood Development, the event engaged mothers and children through interactive activities, highlighting resilience and hope while reaffirming a commitment to a brighter, more inclusive future for every child.",
       },
       {
         key: "UNARW/ngoma/ngoma_2",
