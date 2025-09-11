@@ -6,108 +6,110 @@ import aboutImage from "../../public/about.jpg";
 export const AboutSection = () => {
   return (
     <div className="">
+      {/* Background Banner */}
       <div
         className="py-32 h-[256px] bg-center bg-cover bg-no-repeat relative"
         style={{ backgroundImage: `url(${aboutImage.src})` }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-0"></div>
       </div>
-      <div className="md:py-32 py-10 ">
-        <div className="w-full md:mx-auto px-10 md:px-24">
-          <div className="justify-center w-full flex items-center flex-col">
-            {/* Left: Image */}
-            <div className="flex-shrink-0 flex-grow-0 md:w-5/12 px-3">
+
+      {/* Main Content */}
+      <div className="py-16">
+        <div className="w-full md:mx-auto px-8 md:px-24">
+          <div className="gap-10 items-center">
+            {/* Left: Big Image */}
+            <div className="flex justify-center">
               <Image
                 src={SDGs.src}
-                width={400}
-                height={80}
+                width={500}
+                height={500}
                 alt="UNA-RWANDA"
-                className="w-full -mt-3"
+                className="rounded-lg shadow-lg w-auto h-auto"
               />
             </div>
 
             {/* Right: Content */}
-            <div className="md:w-7/12 px-3  ">
-              <div className="md:pl-[30px]">
-                <h2 className="mb-4 tracking-wide md:text-3xl text-2xl font-bold text-gray-900 dark:text-gray-100">
-                  Who We Are
-                </h2>
+            <div>
+              <h2 className="mb-6 tracking-wide md:text-4xl text-2xl font-bold text-gray-900 dark:text-gray-100">
+                Who We Are
+              </h2>
 
-                <p className="leading-7 text-[15px] ">
-                  The{" "}
-                  <strong>
-                    United Nations Association of Rwanda (UNA-RWANDA)
-                  </strong>
-                  is a non-profit organization committed to transforming
-                  communities into active global citizens. Guided by the
-                  principles and vision of the United Nations, we focus on
-                  driving progress toward the
-                  <strong> Sustainable Development Goals (SDGs)</strong>.
-                </p>
+              <p className="leading-8 text-[17px] text-gray-700 mb-5">
+                The{" "}
+                <strong>
+                  The United Nations Association Rwanda (UNA-RWANDA) stands as a
+                  proud member of the global family of United Nations
+                  Associations, operating under the coordination of the World
+                  Federation of United Nations Associations (WFUNA), which
+                  unites over 100 countries worldwide.
+                </strong>
+                .
+              </p>
 
-                <p className="leading-7 text-[15px] text-gray-700 mt-3">
-                  Our mission is to promote peace, justice, equality, and
-                  sustainable development in Rwanda by empowering communities,
-                  engaging youth, and fostering collaboration. We strive for
-                  diversity, inclusion, and innovation to ensure no one is left
-                  behind in building a brighter and more sustainable future.
-                </p>
+              <p className="leading-8 text-[17px] text-gray-700 mb-5">
+                Our mission is to actively champion and advocate for the aims
+                and ideals set forth by the United Nations. Through impactful
+                initiatives and strategic collaborations, we strive to foster a
+                global environment where cooperation, mutual understanding, and
+                sustainable development thrive.
+              </p>
 
-                <p className="leading-7 text-[15px] text-gray-700 mt-3">
-                  Over the years, UNA-RWANDA has developed diverse programs
-                  designed to transform communities into active global citizens
-                  while advancing the United Nations’ Sustainable Development
-                  Goals (SDGs). Through
-                  <strong> conflict resolution and peacebuilding</strong>, the
-                  association facilitates dialogue and nurtures reconciliation
-                  within communities. Its work in{" "}
-                  <strong>human and people’s rights</strong> strengthens
-                  awareness and protection of fundamental freedoms, while
-                  <strong> women empowerment initiatives</strong> focus on
-                  education, skills development, and advocacy for gender
-                  equality. The
-                  <strong> UN Association Elders League</strong> brings together
-                  respected elders whose wisdom and experience help guide
-                  younger generations in UN-related programs. In addition, the
-                  <strong> School-Net program</strong> connects schools and
-                  educational institutions, encouraging collaboration and
-                  knowledge sharing among students and teachers. Responding to
-                  global challenges, UNA-RWANDA also leads{" "}
-                  <strong>climate action and sustainability efforts</strong>,
-                  engaging communities to protect the environment and adapt to
-                  climate change.
-                </p>
+              <p className="leading-8 text-[17px] text-gray-700 mb-5">
+                As part of this international movement, we are dedicated to
+                advancing the values and principles of the United Nations in
+                Rwanda. Our work focuses on empowering communities,
+                strengthening institutions, enhancing education, and promoting
+                inclusive development that benefits both present and future
+                generations.
+              </p>
 
-                <p className="leading-7 text-[15px] text-gray-700 mt-3">
-                  Through these programs, UNA-RWANDA continues to build a
-                  society that embraces the values of peace, equality,
-                  inclusion, and sustainability, ensuring that every individual
-                  can contribute to Rwanda’s growth as part of the global
-                  community.
-                </p>
+              <p className="leading-8 text-[17px] text-gray-700 mb-5">
+                We uphold the principles of diversity, equity, and inclusion,
+                ensuring that every individual has the opportunity to thrive and
+                contribute to a more just and prosperous society.
+              </p>
 
-                <p className="leading-7 text-[15px] text-gray-700  mt-3">
-                  UNA-RWANDA is part of a global network of UN Associations
-                  coordinated by the{" "}
-                  <a
-                    href="https://www.wfuna.org/"
-                    target="_blank"
-                    className="text-blue-500 underline"
-                  >
-                    World Federation of United Nations Associations (WFUNA)
-                  </a>
-                  , active in over 100 countries worldwide.
-                </p>
+              <p className="leading-8 text-[17px] text-gray-700 mb-5">
+                Our Longtime Focus Areas .
+              </p>
 
-                <div className="mt-5">
-                  <a
-                    href="https://www.wfuna.org/"
-                    target="_blank"
-                    className="bg-blue-600 hover:bg-blue-700 px-4 py-2  rounded-md"
-                  >
-                    Become a member
-                  </a>
-                </div>
+              <ul>
+                <li className="leading-8 text-[17px] text-gray-700 mb-2 list-disc list-inside">
+                  Information, Training, and Resource Centre
+                </li>
+                <li className="leading-8 text-[17px] text-gray-700 mb-2 list-disc list-inside">
+                  Human and People’s Rights
+                </li>
+                <li className="leading-8 text-[17px] text-gray-700 mb-2 list-disc list-inside">
+                  School-Net
+                </li>
+                <li className="leading-8 text-[17px] text-gray-700 mb-2 list-disc list-inside">
+                  UN Association Elders League
+                </li>
+              </ul>
+              <p className="leading-8 text-[17px] text-gray-700 mb-5">
+                UNA-RWANDA is part of a global network of UN Associations
+                coordinated by the{" "}
+                <a
+                  href="https://www.wfuna.org/"
+                  target="_blank"
+                  className="text-blue-500 underline"
+                >
+                  World Federation of United Nations Associations (WFUNA)
+                </a>
+                , active in over 100 countries worldwide.
+              </p>
+
+              {/* CTA Button */}
+              <div className="mt-8">
+                <a
+                  href="/get-involved"
+                  target="_blank"
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-sm font-medium"
+                >
+                  Become a member
+                </a>
               </div>
             </div>
           </div>

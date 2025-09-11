@@ -43,16 +43,16 @@ export const AboutSection = () => {
                   target="_blank"
                   className="text-blue-400 underline"
                 >
-                  (WFUNA)
-                </a>
-                , active in over 100 countries. Join us in building a more
+                  WFUNA
+                </a>{" "}
+                active in over 100 countries. Join us in building a more
                 inclusive and prosperous world for current and future
                 generations.{" "}
               </p>
               <div className="mt-4">
                 <a
                   href="/about-us"
-                  className="bg-blue-500 px-4 py-3 text-white rounded-sm hover:bg-blue-600 hover:rounded-md transition"
+                  className="bg-blue-500 px-4 py-3 text-white rounded-sm hover:bg-blue-600 transition"
                 >
                   read more About Us
                 </a>

@@ -110,7 +110,7 @@ const Navbar = () => {
               <Link className="flex-shrink-0" href="/">
                 <Image
                   width={80}
-                  height={50}
+                  height={80}
                   className={`md:w-[120px] w-[80px]`}
                   src={logo}
                   alt="UNA Rwanda"
@@ -168,16 +168,16 @@ const Navbar = () => {
               >
                 Media
               </a>
-              
-              <a
+
+              {/* <a
                 href="get-involved"
                 className={`hover:text-[#4894DF] px-2 font-semibold md:hidden m:block ${
                   isActive("/get-involved") ? "text-[#4894DF]" : ""
                 }`}
               >
                 Get Involved
-              </a>
-                
+              </a> */}
+
               <Dropdown menu={{ items }} className="hidden md:flex m:hidden">
                 <a onClick={(e) => e.preventDefault()}>
                   <Space>
@@ -224,7 +224,7 @@ const Navbar = () => {
               <Link className="flex-shrink-0" href="/">
                 <Image
                   width={80}
-                  height={50}
+                  height={80}
                   className={`md:w-[120px] w-[80px] p-3`}
                   src={unLogo}
                   alt="UNA Rwanda"
@@ -250,14 +250,14 @@ const Navbar = () => {
               >
                 About Us
               </a>
-              <a
+              {/* <a
                 href="/our-programs"
                 className={`block px-4 py-2 hover:text-[#4894DF] font-semibold ${
                   isActive("/our-programs") ? "text-[#4894DF]" : ""
                 }`}
               >
                 Our Programs
-              </a>
+              </a> */}
               <a
                 href="/our-team"
                 className={`block px-4 py-2 hover:text-[#4894DF] font-semibold ${
@@ -282,14 +282,14 @@ const Navbar = () => {
               >
                 Media
               </a>
-              <a
+              {/* <a
                 href="/get-involved"
                 className={`block px-4 py-2 hover:text-[#4894DF] font-semibold ${
                   isActive("/get-involved") ? "text-[#4894DF]" : ""
                 }`}
               >
                 Get Involved
-              </a>
+              </a> */}
               <a
                 href="/contact-us"
                 className={`block px-4 py-2 hover:text-[#4894DF] font-semibold ${
