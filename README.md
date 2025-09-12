@@ -1,12 +1,5 @@
 # UNA Rwanda – Documentation
 
-This repository contains two main parts of UNA Rwanda’s digital ecosystem:
-
-1. **Nexus Admin Dashboard** – internal content management tool.
-2. **UNA Rwanda Website** – public-facing platform.
-
----
-
 ## UNA Rwanda Website
 
 ### 1. Introduction
