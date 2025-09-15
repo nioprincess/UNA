@@ -8,7 +8,7 @@ The **UNA Rwanda Website** serves as the official digital presence of UNA Rwanda
 
 ### 2. System Overview
 
-The website is designed as a **public platform** to:
+The website is designed as a **public platform** to;
 
 - Share organizational news, events, and updates.
 - Provide details about ongoing projects and programs.
