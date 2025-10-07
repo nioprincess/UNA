@@ -90,14 +90,14 @@ export const AboutSection = () => {
               </ul>
               <p className="leading-8 text-[17px] text-gray-700 mb-5">
                 UNA-RWANDA is part of a global network of UN Associations
-                coordinated by the{" "}
+                coordinated by the{"  "}
                 <a
                   href="https://www.wfuna.org/"
                   target="_blank"
                   className="text-blue-500 underline"
                 >
-                  World Federation of United Nations Associations (WFUNA)
-                </a>
+                  World Federation of United Nations Associations
+                </a>{" "}
                 , active in over 100 countries worldwide.
               </p>
 
@@ -105,7 +105,6 @@ export const AboutSection = () => {
               <div className="mt-8">
                 <a
                   href="/get-involved"
-                  target="_blank"
                   className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-sm font-medium"
                 >
                   Become a member
