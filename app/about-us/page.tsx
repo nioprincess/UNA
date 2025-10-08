@@ -3,7 +3,7 @@ import React from "react";
 import SDGs from "../../public/SDGs.png";
 import aboutImage from "../../public/about.jpg";
 
-export const AboutSection = () => {
+const AboutSection = () => {
   return (
     <div className="">
       {/* Background Banner */}
